@@ -1,0 +1,10 @@
+[GUI (PyQt5)]
+   |
+   +--> [Pre-Processing Module]
+   |        |--> Histogram & Stats
+   |
+   +--> [CFAR Module]
+   |
+   +--> [ROI Module (GDAL/OGR)]
+   |
+   +--> [Display & Save Results]
