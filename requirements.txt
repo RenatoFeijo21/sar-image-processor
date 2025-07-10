@@ -1,0 +1,9 @@
+PyQt5
+rasterio
+numpy
+matplotlib
+scipy
+scikit-learn
+gdal
+notebook
+pyinstaller
