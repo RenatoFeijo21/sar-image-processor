@@ -74,7 +74,7 @@ class SARProcessor(QMainWindow):
 
     def cfar(self):
         if self.image is not None:
-            result = cfar.cfar_process(self.image)
+           result = cfar.cfar_process(self.image_path)
             plt.imshow(result, cmap='gray')
             plt.title('CFAR Processado')
             plt.show()
