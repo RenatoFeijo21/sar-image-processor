@@ -47,13 +47,15 @@ class SARProcessor(QMainWindow):
         self.setCentralWidget(container)
 
     def abrirImagem(self):
-        fileName, _ = QFileDialog.getOpenFileName(self, 'Abrir Imagem SAR', '', 'GeoTIFF (*.tif *.tiff)')
-        if fileName:
-            with rasterio.open(fileName) as src:
-                self.image = src.read(1)
-            plt.imshow(self.image, cmap='gray')
-            plt.title('Imagem SAR')
-            plt.show()
+    fileName, _ = QFileDialog.getOpenFileName(self, 'Abrir Imagem SAR', '', 'GeoTIFF (*.tif *.tiff)')
+    if fileName:
+        with rasterio.open(fileName) as src:
+            self.image = src.read(1)
+        self.image_path = fileName
+        plt.imshow(self.image, cmap='gray')
+        plt.title('Imagem SAR')
+        plt.show()
+
 
     def histograma(self):
         if self.image is not None:
